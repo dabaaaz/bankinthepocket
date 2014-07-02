@@ -62,11 +62,7 @@
             pluginsDict[featureName] = value;
         }
         BOOL paramIsOnload = ([paramName isEqualToString:@"onload"] && [@"true" isEqualToString : value]);
-<<<<<<< HEAD
         BOOL attribIsOnload = [@"true" isEqualToString : [attributeDict[@"onload"] lowercaseString]];
-=======
-        BOOL attribIsOnload = [@"true" isEqualToString :[attributeDict[@"onload"] lowercaseString]];
->>>>>>> 81081e4e4e8e83deb61219409e9b92ecf55b86f2
         if (paramIsOnload || attribIsOnload) {
             [self.startupPluginNames addObject:featureName];
         }
@@ -86,11 +82,7 @@
 
 - (void)parser:(NSXMLParser*)parser parseErrorOccurred:(NSError*)parseError
 {
-<<<<<<< HEAD
     NSAssert(NO, @"config.xml parse error line %d col %d", [parser lineNumber], [parser columnNumber]);
-=======
-    NSAssert(NO, @"config.xml parse error line %ld col %ld", (long)[parser lineNumber], (long)[parser columnNumber]);
->>>>>>> 81081e4e4e8e83deb61219409e9b92ecf55b86f2
 }
 
 @end
